@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="form-style-5">
+        <form method="POST">
+            {% csrf_token %}
+            <legend><span class="number">1</span> View Attendence</legend>
+            <input type="text" name="stdID" Placeholder="Student ID *">
+            <br>
+
+            <input type="submit">
+        </form>
+        </div>
+</div>
+
+
+
+<div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Student ID</th>
+          <th scope="col">Date</th>
+          <th scope="col">Time</th>
+<!--          <th scope="col">Action</th>-->
+        </tr>
+      </thead>
+      <tbody>
+      {% for x in student %}
+        <tr>
+          <td>{{x.std_id}}</td>
+          <td>{{x.date}}</td>
+          <td>{{x.time}}</td>
+<!--          <td>-->
+<!--              <button type="button" class="btn btn-success btn-sm">Edit</button>-->
+<!--              <button type="button" class="btn btn-danger btn-sm">Delete</button>-->
+<!--          </td>-->
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+</div>
+{% endblock %}

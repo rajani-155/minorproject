@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+  <div class="alert alert-success" role="alert">
+    Student Added Sucessfully
+  </div>
+
+  <div class="container">
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Attribute</th>
+            <th scope="col">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Student ID</td>
+            <td>{{id}}</td>
+          </tr>
+          <tr>
+            <td>First Name</td>
+            <td>{{f_name}}</td>
+          </tr>
+          <tr>
+            <td>Middle Name</td>
+            <td>{{m_name}}</td>
+          </tr>
+          <tr>
+            <td>Last Name</td>
+            <td>{{l_name}}</td>
+          </tr>
+          <tr>
+            <td>Faculty</td>
+            <td>{{faculty}}</td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>{{address}}</td>
+          </tr>
+          <tr>
+            <td>Phone</td>
+            <td>{{phone}}</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>{{email}}</td>
+          </tr>
+          <tr>
+            <td>Image</td>
+            <td><img src="{{imgurl}}" style="height:300px;width:400px"></td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
+{% endblock %}

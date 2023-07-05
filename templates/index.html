@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Management System</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>School Name</h1>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Students</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Grades</a></li>
+        <li><a href="#">Attendance</a></li>
+        <li><a href="#">Timetable</a></li>
+        <li><a href="#">Library</a></li>
+        <li><a href="#">Fees</a></li>
+        <li><a href="#">Reports</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="home-section">
+    <div class="container">
+      <h2>Welcome to the Student Management System</h2>
+      <p>In this student management system, you can perform various tasks such as managing student profiles, course registrations, grading, attendance, library resources, fees, and generating reports. Use the navigation menu above to access different sections of the system.</p>
+      <p>If you need any assistance or have any questions, please refer to the support and contact information in the footer section.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 School Name. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
+{% endblock %}
+
+{% if context %}
+  <div class="alert alert-success" role="alert">
+    Student Added Successfully
+  </div>
+
+  <div class="container">
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Attribute</th>
+            <th scope="col">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Student ID</td>
+            <td>{{ id }}</td>
+          </tr>
+          <tr>
+            <td>First Name</td>
+            <td>{{ f_name }}</td>
+          </tr>
+          <tr>
+            <td>Middle Name</td>
+            <td>{{ m_name }}</td>
+          </tr>
+          <tr>
+            <td>Last Name</td>
+            <td>{{ l_name }}</td>
+          </tr>
+          <tr>
+            <td>Faculty</td>
+            <td>{{ faculty }}</td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>{{ address }}</td>
+          </tr>
+          <tr>
+            <td>Phone</td>
+            <td>{{ phone }}</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>{{ email }}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+{% endif %}
